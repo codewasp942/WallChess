@@ -38,7 +38,7 @@ int getk() {
 			break;
 		}
 		case 32: {
-			return 50;
+			return 32;
 			break;
 		}
 		default: {

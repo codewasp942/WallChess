@@ -30,10 +30,15 @@ int main(){
 
 	pos p1(1, 1),p2(xw, yw);
 	
-	/*while (1) {
+	while (1) {
 		int akey = getk();
-
-	}*/
+		while (akey != 32) {
+			if (0 <= akey && akey <= 3) {
+				p1 = akey;
+			}
+			akey = getk();
+		}
+	}
 	dfs(cmove, mp, xw, yw, p1, p2, 3);
 	for (int i = 1;i <= xw;i++) {
 		for (int j = 1;j <= yw;j++) {
