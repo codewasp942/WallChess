@@ -140,10 +140,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="outex.cpp" />
     <ClCompile Include="position.cpp" />
     <ClCompile Include="WallChess.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="outex.h" />
     <ClInclude Include="position.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
