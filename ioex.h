@@ -7,3 +7,5 @@ enum {COL_BLACK=0,COL_RED,COL_GREEN,COL_YELLOW,
 #define cls printf("\033[2J")
 
 void outch(char ch, int x, int y, int textcol=7, int bgcol=0);
+
+int getk();

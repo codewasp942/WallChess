@@ -1,6 +1,9 @@
 #include"position.h"
 using namespace std;
 
+int dx[] = { -1,0,1,0 };
+int dy[] = { 0,-1,0,1 };
+
 pos::pos(int _x, int _y) {
 	x = _x;y = _y;
 }
@@ -17,20 +20,12 @@ void pos::clp(int minx, int maxx, int miny, int maxy) {
 }
 
 pos pos::operator[](int d) {
-	pos ot;
-	switch (d) {
-	case 0: {
-		ot.x--;
-	}
-	case 1: {
-		ot.y--;
-	}
-	case 2: {
-		ot.x++;
-	}
-	case 3: {
-		ot.y++;
-	}
-	}
-	return ot;
+	pos b;
+	b.x = x + dx[d];
+	b.y = y + dy[d];
+	return b;
+}
+
+bool pos::operator==(const pos& b) {
+	return (x == b.x) && (y == b.y);
 }

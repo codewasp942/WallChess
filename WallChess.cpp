@@ -10,7 +10,9 @@ Visual Studio 2019 on windows
 #include <cmath>
 #include <conio.h>
 #include "position.h"
-#include "outex.h"
+#include "ioex.h"
+#include "dfs.h"
+#include "qipan.h"
 
 using namespace std;
 
@@ -27,11 +29,17 @@ int main(){
 	}
 
 	pos p1(1, 1),p2(xw, yw);
-	char ch;
 	
-	while (1) {
-		ch = getch();
-		cout << (int)ch;
+	/*while (1) {
+		int akey = getk();
+
+	}*/
+	dfs(cmove, mp, xw, yw, p1, p2, 3);
+	for (int i = 1;i <= xw;i++) {
+		for (int j = 1;j <= yw;j++) {
+			printf("%d", cmove[i][j]);
+		}
+		printf("\n");
 	}
 
 	return 0;

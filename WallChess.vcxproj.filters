@@ -21,7 +21,13 @@
     <ClCompile Include="position.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="outex.cpp">
+    <ClCompile Include="dfs.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ioex.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="qipan.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -29,7 +35,13 @@
     <ClInclude Include="position.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="outex.h">
+    <ClInclude Include="dfs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ioex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="qipan.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

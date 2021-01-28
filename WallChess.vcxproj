@@ -140,13 +140,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="outex.cpp" />
+    <ClCompile Include="dfs.cpp" />
+    <ClCompile Include="ioex.cpp" />
     <ClCompile Include="position.cpp" />
+    <ClCompile Include="qipan.cpp" />
     <ClCompile Include="WallChess.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="outex.h" />
+    <ClInclude Include="dfs.h" />
+    <ClInclude Include="ioex.h" />
     <ClInclude Include="position.h" />
+    <ClInclude Include="qipan.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
