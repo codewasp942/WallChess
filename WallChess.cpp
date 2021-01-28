@@ -30,8 +30,7 @@ int main(){
 	char ch;
 	
 	while (1) {
-		ch = getchar();
-		printf("\033[2J");
+		ch = getch();
 		cout << (int)ch;
 	}
 
