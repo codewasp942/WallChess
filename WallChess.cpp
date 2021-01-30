@@ -59,7 +59,7 @@ int main(){
 		p2.x = xw;p2.y = yw;
 		int akey;
 		while (1) {
-			scan(cmove, mp, xw, yw, p1, p2, 3);
+			scan(0, cmove, mp, xw, yw, p1, p2, 3);
 			draw();
 			akey = getk();
 			while (akey != 32) {
@@ -91,14 +91,14 @@ int main(){
 				if (mp[1][p1.x][p1.y + 1])goto panduan_p1;
 				mp[1][p1.x][p1.y + 1] = 1;
 			}
-			scan(cmove, mp, xw, yw, p2, p1, 3);
+			scan(0, cmove, mp, xw, yw, p2, p1, 3);
 			draw();
 
 			if (!judge()) {
 				break;
 			}
 
-			scan(cmove, mp, xw, yw, p2, p1, 3);
+			scan(0, cmove, mp, xw, yw, p2, p1, 3);
 			draw();
 			akey = getk();
 			while (akey != 32) {
@@ -130,7 +130,7 @@ int main(){
 				if (mp[1][p2.x][p2.y + 1])goto panduan_p2;
 				mp[1][p2.x][p2.y + 1] = 1;
 			}
-			scan(cmove, mp, xw, yw, p2, p1, 3);
+			scan(0, cmove, mp, xw, yw, p2, p1, 3);
 			draw();
 
 			if (!judge()) {
@@ -145,7 +145,10 @@ int main(){
 		}elif(s1 == s2) {
 			puts(">>> >>> -+-+ Tie +-+- <<< <<<");
 		}
-		printf("          %2d : %2d\n", s1, s2);
+		printf("\n\n");
+		printf("          %2d ",s1);
+		outch(':', COL_RED, COL_BLACK);
+		printf(" %2d\n\n\n\n",s2);
 		system("pause");
 	}
 
@@ -224,7 +227,7 @@ void printhelp() {
 }
 
 bool judge() {
-	s1 = scan(cmove, mp, xw, yw, p1, p2, 0);
-	s2 = scan(cmove, mp, xw, yw, p2, p1, 0);
+	s1 = scan(1, cmove, mp, xw, yw, p1, p2, 0);
+	s2 = scan(1, cmove, mp, xw, yw, p2, p1, 0);
 	return cmove[p1.x][p1.y];
 }
