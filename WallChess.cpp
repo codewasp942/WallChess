@@ -76,19 +76,19 @@ int main(){
 				}
 				akey = getk();
 			}
-			//panduan_p1:
+			panduan_p1:
 			do { akey = getk(); } while (0 > akey || akey > 3);
 			if (akey == 0) {
-				//if (mp[0][p1.x][p1.y])goto panduan_p1;
+				if (mp[0][p1.x][p1.y])goto panduan_p1;
 				mp[0][p1.x][p1.y] = 1;
 			}elif(akey == 1) {
-				//if (mp[1][p1.x][p1.y])goto panduan_p1;
+				if (mp[1][p1.x][p1.y])goto panduan_p1;
 				mp[1][p1.x][p1.y] = 1;
 			}elif(akey == 2) {
-				//if (mp[0][p1.x + 1][p1.y])goto panduan_p1;
+				if (mp[0][p1.x + 1][p1.y])goto panduan_p1;
 				mp[0][p1.x + 1][p1.y] = 1;
 			}elif(akey == 3) {
-				//if (mp[1][p1.x][p1.y + 1])goto panduan_p1;
+				if (mp[1][p1.x][p1.y + 1])goto panduan_p1;
 				mp[1][p1.x][p1.y + 1] = 1;
 			}
 			scan(cmove, mp, xw, yw, p2, p1, 3);
@@ -115,19 +115,19 @@ int main(){
 				}
 				akey = getk();
 			}
-			//panduan_p2:
+			panduan_p2:
 			do { akey = getk(); } while (0 > akey || akey > 3);
 			if (akey == 0) {
-				//if (mp[0][p2.x][p2.y])goto panduan_p2;
+				if (mp[0][p2.x][p2.y])goto panduan_p2;
 				mp[0][p2.x][p2.y] = 1;
 			}elif(akey == 1) {
-				//if (mp[1][p2.x][p2.y])goto panduan_p2;
+				if (mp[1][p2.x][p2.y])goto panduan_p2;
 				mp[1][p2.x][p2.y] = 1;
 			}elif(akey == 2) {
-				//if (mp[0][p2.x + 1][p2.y])goto panduan_p2;
+				if (mp[0][p2.x + 1][p2.y])goto panduan_p2;
 				mp[0][p2.x + 1][p2.y] = 1;
 			}elif(akey == 3) {
-				//if (mp[1][p2.x][p2.y + 1])goto panduan_p2;
+				if (mp[1][p2.x][p2.y + 1])goto panduan_p2;
 				mp[1][p2.x][p2.y + 1] = 1;
 			}
 			scan(cmove, mp, xw, yw, p2, p1, 3);
