@@ -3,16 +3,12 @@
 #include <cstdio>
 #include <conio.h>
 
-HANDLE hout;
-
-bool hinit() {
+bool hinit(HANDLE &hout) {
     hout = GetStdHandle(STD_OUTPUT_HANDLE);
     return hout != INVALID_HANDLE_VALUE;
 }
 
-void outch(char ch, int x, int y, int textcol, int bgcol) {
-    COORD coord = { y, x };
-    SetConsoleCursorPosition(hout, coord);
+void outch(char ch, int textcol, int bgcol) {
     char buffer[1009];
     sprintf(buffer, "\033[%d;%dm%c\033[0m", 30 + textcol, 40 + bgcol, ch);
     printf("%s", buffer);
@@ -39,6 +35,10 @@ int getk() {
 		}
 		case 32: {
 			return 32;
+			break;
+		}
+		case 'i': {
+			return 'i';
 			break;
 		}
 		default: {
