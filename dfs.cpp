@@ -25,22 +25,6 @@ void _bfs(bool(*outmem)[maxyw], bool(*wallarr)[maxxw][maxyw], int xw, int yw, po
 			q.push(make_pair(nxt, nw.second + 1));
 		}
 	}
-	
-	
-	/*
-	
-	if (stt == bik)return;
-	if (maxsize > 0 && stp > maxsize)return;
-	cnt++;
-	for (int i = 0;i < 4;i++) {
-		pos nxt = stt[i];
-		if (nxt.x<1 || nxt.x>xw || nxt.y<1 || nxt.y>yw)continue;
-		if (wallarr[i % 2][max(stt.x, nxt.x)][max(stt.y, nxt.y)])continue;
-		if (outmem[nxt.x][nxt.y])continue;
-		outmem[nxt.x][nxt.y] = 1;
-		_dfs(outmem, wallarr, xw, yw, nxt, bik, maxsize, stp + 1, cnt);
-	}
-	*/
 }
 
 int scan(bool(*outmem)[maxyw], bool(*wallarr)[maxxw][maxyw], int xw, int yw, pos stt, pos bik, int maxsize) {
